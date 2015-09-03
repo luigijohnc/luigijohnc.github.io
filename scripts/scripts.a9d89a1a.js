@@ -1,3 +1,49 @@
+'use strict';
+
+/**
+ * @ngdoc overview
+ * @name fileApp
+ * @description
+ * # fileApp
+ *
+ * Main module of the application.
+ */
+angular
+  .module('fileApp', [
+    'ngAnimate',
+    'ngCookies',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'ngTouch'
+  ])
+  .config(function ($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+  });
+
+'use strict';
+
+/**
+ * @ngdoc function
+ * @name fileApp.controller:IndexCtrl
+ * @description
+ * # IndexCtrl
+ * Controller of the fileApp
+ */
+angular.module('fileApp')
+    .controller('IndexCtrl', function($scope) {
+        $scope.changeColor = function(page) {
+            $scope.backgroundColor = (page!=='base') ? (page + '-bg') : '';
+        };
+    });
+
 /*global $: false*/
 'use strict';
 
