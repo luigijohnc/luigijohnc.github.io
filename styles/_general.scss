@@ -1,0 +1,118 @@
+/*========== Material Design Icon Font ==========
+  ===============================================
+*/
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v7/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    word-wrap: normal;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/*========== General Styling ==========
+  =====================================
+*/
+body {
+    transition: background-color 0.5s ease;
+    background: color("grey", "darken-3");
+    color: white;
+    text-align: center;
+    overflow:hidden;
+}
+
+a {
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+
+/*========== Different Colors of the Background ==========
+  ========================================================
+*/
+circle.base-bg {
+    fill: color("grey", "darken-3");
+}
+
+circle.about-bg {
+    fill: color("light-blue", "base");
+}
+
+circle.skills-bg {
+    fill: color("teal", "base");
+}
+
+circle.web-bg {
+    fill: color("green", "base");
+}
+
+circle.graphics-bg {
+    fill: color("lime", "base");
+}
+
+circle.contact-bg {
+    fill: color("amber", "base");
+}
+
+circle.social-bg {
+    fill: color("orange", "base");
+}
+
+/* .circle-background {
+    border-radius: 50%;
+    cursor: auto;
+    width: 70px;
+    height: 70px;
+    background: color('grey','lighten-5');
+    transition: all 1s linear;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: -1;
+} */
+
+.circle-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    z-index: -1;
+    transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(-50%,-50%); 
+    circle {
+        transition: all .8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+.scale {
+    height: 300px;
+    width: 300px;
+    transform: scale(50);
+}
